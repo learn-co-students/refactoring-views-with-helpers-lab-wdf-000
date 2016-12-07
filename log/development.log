@@ -375,3 +375,1707 @@ Processing by ArtistsController#show as HTML
   Parameters: {"id"=>"2"}
   Rendered artists/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-29 21:56:11 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 10ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists" for ::1 at 2016-08-29 21:56:18 -0400
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template artists/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/aehmt/Development/code/rails/refactoring-views-with-helpers-lab-wdf-000/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (53.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.7ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (88.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-08-29 21:56:22 -0400
+Processing by ArtistsController#new as HTML
+  Rendered artists/_artist.html.erb (0.5ms)
+  Rendered artists/_artist.html.erb (2.1ms)
+  Rendered artists/_artist.html.erb (2.9ms)
+  Rendered artists/_artist.html.erb (3.7ms)
+  Rendered artists/_artist.html.erb (4.5ms)
+  Rendered artists/_artist.html.erb (5.4ms)
+  Rendered artists/_artist.html.erb (6.1ms)
+  Rendered artists/_artist.html.erb (7.0ms)
+  Rendered artists/_artist.html.erb (7.9ms)
+  Rendered artists/_artist.html.erb (8.8ms)
+  Rendered artists/_artist.html.erb (9.5ms)
+  Rendered artists/_artist.html.erb (10.3ms)
+  Rendered artists/_artist.html.erb (11.1ms)
+  Rendered artists/_artist.html.erb (11.9ms)
+  Rendered artists/_artist.html.erb (12.7ms)
+  Rendered artists/_artist.html.erb (13.6ms)
+  Rendered artists/_artist.html.erb (14.5ms)
+  Rendered artists/_artist.html.erb (15.3ms)
+  Rendered artists/_artist.html.erb (16.2ms)
+  Rendered artists/_artist.html.erb (17.1ms)
+  Rendered artists/_artist.html.erb (17.9ms)
+  Rendered artists/_artist.html.erb (18.6ms)
+  Rendered artists/_artist.html.erb (19.5ms)
+  Rendered artists/_artist.html.erb (20.4ms)
+  Rendered artists/_artist.html.erb (21.2ms)
+  Rendered artists/_artist.html.erb (22.5ms)
+  Rendered artists/_artist.html.erb (23.6ms)
+  Rendered artists/_artist.html.erb (24.6ms)
+  Rendered artists/_artist.html.erb (26.0ms)
+  Rendered artists/_artist.html.erb (27.3ms)
+  Rendered artists/_artist.html.erb (28.2ms)
+  Rendered artists/_artist.html.erb (29.0ms)
+  Rendered artists/_artist.html.erb (29.9ms)
+  Rendered artists/_artist.html.erb (30.9ms)
+  Rendered artists/_artist.html.erb (31.9ms)
+  Rendered artists/_artist.html.erb (33.0ms)
+  Rendered artists/_artist.html.erb (34.1ms)
+  Rendered artists/_artist.html.erb (35.0ms)
+  Rendered artists/_artist.html.erb (36.1ms)
+  Rendered artists/_artist.html.erb (37.2ms)
+  Rendered artists/_artist.html.erb (38.3ms)
+  Rendered artists/_artist.html.erb (39.6ms)
+  Rendered artists/_artist.html.erb (41.0ms)
+  Rendered artists/_artist.html.erb (42.4ms)
+  Rendered artists/_artist.html.erb (43.3ms)
+  Rendered artists/_artist.html.erb (44.2ms)
+  Rendered artists/_artist.html.erb (45.3ms)
+  Rendered artists/_artist.html.erb (46.7ms)
+  Rendered artists/_artist.html.erb (47.7ms)
+  Rendered artists/_artist.html.erb (48.8ms)
+  Rendered artists/_artist.html.erb (49.8ms)
+  Rendered artists/_artist.html.erb (51.1ms)
+  Rendered artists/_artist.html.erb (52.6ms)
+  Rendered artists/_artist.html.erb (54.0ms)
+  Rendered artists/_artist.html.erb (55.4ms)
+  Rendered artists/_artist.html.erb (56.9ms)
+  Rendered artists/_artist.html.erb (58.1ms)
+  Rendered artists/_artist.html.erb (58.9ms)
+  Rendered artists/_artist.html.erb (59.7ms)
+  Rendered artists/_artist.html.erb (60.5ms)
+  Rendered artists/_artist.html.erb (61.3ms)
+  Rendered artists/_artist.html.erb (62.2ms)
+  Rendered artists/_artist.html.erb (63.1ms)
+  Rendered artists/_artist.html.erb (64.1ms)
+  Rendered artists/_artist.html.erb (64.9ms)
+  Rendered artists/_artist.html.erb (65.7ms)
+  Rendered artists/_artist.html.erb (66.5ms)
+  Rendered artists/_artist.html.erb (67.4ms)
+  Rendered artists/_artist.html.erb (68.3ms)
+  Rendered artists/_artist.html.erb (69.8ms)
+  Rendered artists/_artist.html.erb (70.8ms)
+  Rendered artists/_artist.html.erb (71.6ms)
+  Rendered artists/_artist.html.erb (72.4ms)
+  Rendered artists/_artist.html.erb (73.2ms)
+  Rendered artists/_artist.html.erb (74.0ms)
+  Rendered artists/_artist.html.erb (74.8ms)
+  Rendered artists/_artist.html.erb (75.8ms)
+  Rendered artists/_artist.html.erb (76.8ms)
+  Rendered artists/_artist.html.erb (77.6ms)
+  Rendered artists/_artist.html.erb (78.4ms)
+  Rendered artists/_artist.html.erb (79.3ms)
+  Rendered artists/_artist.html.erb (80.2ms)
+  Rendered artists/_artist.html.erb (81.3ms)
+  Rendered artists/_artist.html.erb (82.4ms)
+  Rendered artists/_artist.html.erb (83.3ms)
+  Rendered artists/_artist.html.erb (84.2ms)
+  Rendered artists/_artist.html.erb (85.3ms)
+  Rendered artists/_artist.html.erb (86.6ms)
+  Rendered artists/_artist.html.erb (87.5ms)
+  Rendered artists/_artist.html.erb (88.6ms)
+  Rendered artists/_artist.html.erb (89.4ms)
+  Rendered artists/_artist.html.erb (90.2ms)
+  Rendered artists/_artist.html.erb (91.3ms)
+  Rendered artists/_artist.html.erb (92.1ms)
+  Rendered artists/_artist.html.erb (92.9ms)
+  Rendered artists/_artist.html.erb (93.8ms)
+  Rendered artists/_artist.html.erb (94.7ms)
+  Rendered artists/_artist.html.erb (95.6ms)
+  Rendered artists/_artist.html.erb (96.3ms)
+  Rendered artists/_artist.html.erb (97.2ms)
+  Rendered artists/_artist.html.erb (97.9ms)
+  Rendered artists/_artist.html.erb (98.7ms)
+  Rendered artists/_artist.html.erb (99.5ms)
+  Rendered artists/_artist.html.erb (100.3ms)
+  Rendered artists/_artist.html.erb (101.3ms)
+  Rendered artists/_artist.html.erb (102.2ms)
+  Rendered artists/_artist.html.erb (103.2ms)
+  Rendered artists/_artist.html.erb (104.2ms)
+  Rendered artists/_artist.html.erb (105.2ms)
+  Rendered artists/_artist.html.erb (106.4ms)
+  Rendered artists/_artist.html.erb (107.4ms)
+  Rendered artists/_artist.html.erb (108.2ms)
+  Rendered artists/_artist.html.erb (109.0ms)
+  Rendered artists/_artist.html.erb (109.8ms)
+  Rendered artists/_artist.html.erb (110.9ms)
+  Rendered artists/_artist.html.erb (111.7ms)
+  Rendered artists/_artist.html.erb (112.6ms)
+  Rendered artists/_artist.html.erb (113.6ms)
+  Rendered artists/_artist.html.erb (114.4ms)
+  Rendered artists/_artist.html.erb (115.1ms)
+  Rendered artists/_artist.html.erb (116.0ms)
+  Rendered artists/_artist.html.erb (116.8ms)
+  Rendered artists/_artist.html.erb (117.6ms)
+  Rendered artists/_artist.html.erb (118.5ms)
+  Rendered artists/_artist.html.erb (119.5ms)
+  Rendered artists/_artist.html.erb (120.4ms)
+  Rendered artists/_artist.html.erb (121.3ms)
+  Rendered artists/_artist.html.erb (122.2ms)
+  Rendered artists/_artist.html.erb (123.2ms)
+  Rendered artists/_artist.html.erb (124.7ms)
+  Rendered artists/_artist.html.erb (125.9ms)
+  Rendered artists/_artist.html.erb (126.6ms)
+  Rendered artists/_artist.html.erb (127.4ms)
+  Rendered artists/_artist.html.erb (128.2ms)
+  Rendered artists/_artist.html.erb (129.0ms)
+  Rendered artists/_artist.html.erb (129.8ms)
+  Rendered artists/_artist.html.erb (131.0ms)
+  Rendered artists/_artist.html.erb (132.0ms)
+  Rendered artists/_artist.html.erb (132.7ms)
+  Rendered artists/_artist.html.erb (133.5ms)
+  Rendered artists/_artist.html.erb (134.4ms)
+  Rendered artists/_artist.html.erb (135.2ms)
+  Rendered artists/_artist.html.erb (136.2ms)
+  Rendered artists/_artist.html.erb (137.1ms)
+  Rendered artists/_artist.html.erb (138.2ms)
+  Rendered artists/_artist.html.erb (139.3ms)
+  Rendered artists/_artist.html.erb (140.1ms)
+  Rendered artists/_artist.html.erb (141.0ms)
+  Rendered artists/_artist.html.erb (141.8ms)
+  Rendered artists/_artist.html.erb (142.6ms)
+  Rendered artists/_artist.html.erb (143.5ms)
+  Rendered artists/_artist.html.erb (144.5ms)
+  Rendered artists/_artist.html.erb (145.2ms)
+  Rendered artists/_artist.html.erb (146.0ms)
+  Rendered artists/_artist.html.erb (146.8ms)
+  Rendered artists/_artist.html.erb (147.6ms)
+  Rendered artists/_artist.html.erb (148.4ms)
+  Rendered artists/_artist.html.erb (149.6ms)
+  Rendered artists/_artist.html.erb (150.6ms)
+  Rendered artists/_artist.html.erb (151.4ms)
+  Rendered artists/_artist.html.erb (152.2ms)
+  Rendered artists/_artist.html.erb (153.0ms)
+  Rendered artists/_artist.html.erb (153.7ms)
+  Rendered artists/_artist.html.erb (154.5ms)
+  Rendered artists/_artist.html.erb (155.3ms)
+  Rendered artists/_artist.html.erb (156.2ms)
+  Rendered artists/_artist.html.erb (157.2ms)
+  Rendered artists/_artist.html.erb (158.1ms)
+  Rendered artists/_artist.html.erb (158.9ms)
+  Rendered artists/_artist.html.erb (159.7ms)
+  Rendered artists/_artist.html.erb (160.5ms)
+  Rendered artists/_artist.html.erb (161.3ms)
+  Rendered artists/_artist.html.erb (162.3ms)
+  Rendered artists/_artist.html.erb (163.3ms)
+  Rendered artists/_artist.html.erb (164.0ms)
+  Rendered artists/_artist.html.erb (164.8ms)
+  Rendered artists/_artist.html.erb (165.7ms)
+  Rendered artists/_artist.html.erb (166.6ms)
+  Rendered artists/_artist.html.erb (167.5ms)
+  Rendered artists/_artist.html.erb (168.8ms)
+  Rendered artists/_artist.html.erb (170.0ms)
+  Rendered artists/_artist.html.erb (171.1ms)
+  Rendered artists/_artist.html.erb (172.2ms)
+  Rendered artists/_artist.html.erb (173.4ms)
+  Rendered artists/_artist.html.erb (174.6ms)
+  Rendered artists/_artist.html.erb (175.7ms)
+  Rendered artists/_artist.html.erb (176.5ms)
+  Rendered artists/_artist.html.erb (177.3ms)
+  Rendered artists/_artist.html.erb (178.2ms)
+  Rendered artists/_artist.html.erb (179.1ms)
+  Rendered artists/_artist.html.erb (180.1ms)
+  Rendered artists/_artist.html.erb (181.1ms)
+  Rendered artists/_artist.html.erb (182.2ms)
+  Rendered artists/_artist.html.erb (183.3ms)
+  Rendered artists/_artist.html.erb (184.4ms)
+  Rendered artists/_artist.html.erb (185.4ms)
+  Rendered artists/_artist.html.erb (186.6ms)
+  Rendered artists/_artist.html.erb (187.6ms)
+  Rendered artists/_artist.html.erb (188.4ms)
+  Rendered artists/_artist.html.erb (189.2ms)
+  Rendered artists/_artist.html.erb (190.0ms)
+  Rendered artists/_artist.html.erb (191.0ms)
+  Rendered artists/_artist.html.erb (192.0ms)
+  Rendered artists/_artist.html.erb (193.1ms)
+  Rendered artists/_artist.html.erb (194.2ms)
+  Rendered artists/_artist.html.erb (195.1ms)
+  Rendered artists/_artist.html.erb (196.1ms)
+  Rendered artists/_artist.html.erb (197.2ms)
+  Rendered artists/_artist.html.erb (198.3ms)
+  Rendered artists/_artist.html.erb (199.5ms)
+  Rendered artists/_artist.html.erb (200.4ms)
+  Rendered artists/_artist.html.erb (201.1ms)
+  Rendered artists/_artist.html.erb (202.0ms)
+  Rendered artists/_artist.html.erb (202.9ms)
+  Rendered artists/_artist.html.erb (203.9ms)
+  Rendered artists/_artist.html.erb (204.9ms)
+  Rendered artists/_artist.html.erb (206.1ms)
+  Rendered artists/_artist.html.erb (207.1ms)
+  Rendered artists/_artist.html.erb (208.0ms)
+  Rendered artists/_artist.html.erb (208.9ms)
+  Rendered artists/_artist.html.erb (209.9ms)
+  Rendered artists/_artist.html.erb (210.9ms)
+  Rendered artists/_artist.html.erb (212.0ms)
+  Rendered artists/_artist.html.erb (213.3ms)
+  Rendered artists/_artist.html.erb (214.3ms)
+  Rendered artists/_artist.html.erb (215.4ms)
+  Rendered artists/_artist.html.erb (216.5ms)
+  Rendered artists/_artist.html.erb (217.7ms)
+  Rendered artists/_artist.html.erb (218.7ms)
+  Rendered artists/_artist.html.erb (219.5ms)
+  Rendered artists/_artist.html.erb (220.3ms)
+  Rendered artists/_artist.html.erb (221.1ms)
+  Rendered artists/_artist.html.erb (221.9ms)
+  Rendered artists/_artist.html.erb (222.7ms)
+  Rendered artists/_artist.html.erb (223.6ms)
+  Rendered artists/_artist.html.erb (224.6ms)
+  Rendered artists/_artist.html.erb (225.4ms)
+  Rendered artists/_artist.html.erb (226.3ms)
+  Rendered artists/_artist.html.erb (227.3ms)
+  Rendered artists/_artist.html.erb (228.3ms)
+  Rendered artists/_artist.html.erb (229.3ms)
+  Rendered artists/_artist.html.erb (230.6ms)
+  Rendered artists/_artist.html.erb (231.7ms)
+  Rendered artists/_artist.html.erb (232.7ms)
+  Rendered artists/_artist.html.erb (234.2ms)
+  Rendered artists/_artist.html.erb (235.5ms)
+  Rendered artists/_artist.html.erb (236.9ms)
+  Rendered artists/_artist.html.erb (238.1ms)
+  Rendered artists/_artist.html.erb (239.5ms)
+  Rendered artists/_artist.html.erb (241.0ms)
+  Rendered artists/_artist.html.erb (242.5ms)
+  Rendered artists/_artist.html.erb (243.3ms)
+  Rendered artists/_artist.html.erb (244.1ms)
+  Rendered artists/_artist.html.erb (244.9ms)
+  Rendered artists/_artist.html.erb (245.6ms)
+  Rendered artists/_artist.html.erb (246.4ms)
+  Rendered artists/_artist.html.erb (247.2ms)
+  Rendered artists/_artist.html.erb (248.1ms)
+  Rendered artists/_artist.html.erb (249.0ms)
+  Rendered artists/_artist.html.erb (249.8ms)
+  Rendered artists/_artist.html.erb (250.7ms)
+  Rendered artists/_artist.html.erb (251.4ms)
+  Rendered artists/_artist.html.erb (252.2ms)
+  Rendered artists/_artist.html.erb (253.1ms)
+  Rendered artists/_artist.html.erb (254.0ms)
+  Rendered artists/_artist.html.erb (255.0ms)
+  Rendered artists/_artist.html.erb (256.3ms)
+  Rendered artists/_artist.html.erb (257.2ms)
+  Rendered artists/_artist.html.erb (258.3ms)
+  Rendered artists/_artist.html.erb (259.4ms)
+  Rendered artists/_artist.html.erb (260.6ms)
+  Rendered artists/_artist.html.erb (261.9ms)
+  Rendered artists/_artist.html.erb (263.4ms)
+  Rendered artists/_artist.html.erb (264.9ms)
+  Rendered artists/_artist.html.erb (266.3ms)
+  Rendered artists/_artist.html.erb (267.4ms)
+  Rendered artists/_artist.html.erb (268.2ms)
+  Rendered artists/_artist.html.erb (269.0ms)
+  Rendered artists/_artist.html.erb (269.8ms)
+  Rendered artists/_artist.html.erb (270.5ms)
+  Rendered artists/_artist.html.erb (271.4ms)
+  Rendered artists/_artist.html.erb (272.3ms)
+  Rendered artists/_artist.html.erb (273.3ms)
+  Rendered artists/_artist.html.erb (274.1ms)
+  Rendered artists/_artist.html.erb (274.9ms)
+  Rendered artists/_artist.html.erb (275.7ms)
+  Rendered artists/_artist.html.erb (276.4ms)
+  Rendered artists/_artist.html.erb (277.2ms)
+  Rendered artists/_artist.html.erb (278.3ms)
+  Rendered artists/_artist.html.erb (279.2ms)
+  Rendered artists/_artist.html.erb (280.3ms)
+  Rendered artists/_artist.html.erb (281.5ms)
+  Rendered artists/_artist.html.erb (282.7ms)
+  Rendered artists/_artist.html.erb (283.8ms)
+  Rendered artists/_artist.html.erb (284.9ms)
+  Rendered artists/_artist.html.erb (286.1ms)
+  Rendered artists/_artist.html.erb (287.1ms)
+  Rendered artists/_artist.html.erb (288.3ms)
+  Rendered artists/_artist.html.erb (289.5ms)
+  Rendered artists/_artist.html.erb (290.8ms)
+  Rendered artists/_artist.html.erb (292.0ms)
+  Rendered artists/_artist.html.erb (293.1ms)
+  Rendered artists/_artist.html.erb (294.2ms)
+  Rendered artists/_artist.html.erb (295.3ms)
+  Rendered artists/_artist.html.erb (296.4ms)
+  Rendered artists/_artist.html.erb (297.6ms)
+  Rendered artists/_artist.html.erb (298.9ms)
+  Rendered artists/_artist.html.erb (300.3ms)
+  Rendered artists/_artist.html.erb (301.5ms)
+  Rendered artists/_artist.html.erb (302.9ms)
+  Rendered artists/_artist.html.erb (304.2ms)
+  Rendered artists/_artist.html.erb (305.0ms)
+  Rendered artists/_artist.html.erb (305.8ms)
+  Rendered artists/_artist.html.erb (306.6ms)
+  Rendered artists/_artist.html.erb (307.4ms)
+  Rendered artists/_artist.html.erb (308.2ms)
+  Rendered artists/_artist.html.erb (309.1ms)
+  Rendered artists/_artist.html.erb (310.0ms)
+  Rendered artists/_artist.html.erb (310.7ms)
+  Rendered artists/_artist.html.erb (311.5ms)
+  Rendered artists/_artist.html.erb (312.3ms)
+  Rendered artists/_artist.html.erb (313.2ms)
+  Rendered artists/_artist.html.erb (314.1ms)
+  Rendered artists/_artist.html.erb (315.0ms)
+  Rendered artists/_artist.html.erb (316.2ms)
+  Rendered artists/_artist.html.erb (317.0ms)
+  Rendered artists/_artist.html.erb (317.9ms)
+  Rendered artists/_artist.html.erb (318.7ms)
+  Rendered artists/_artist.html.erb (319.5ms)
+  Rendered artists/_artist.html.erb (320.3ms)
+  Rendered artists/_artist.html.erb (321.2ms)
+  Rendered artists/_artist.html.erb (322.1ms)
+  Rendered artists/_artist.html.erb (323.4ms)
+  Rendered artists/_artist.html.erb (324.4ms)
+  Rendered artists/_artist.html.erb (325.4ms)
+  Rendered artists/_artist.html.erb (326.5ms)
+  Rendered artists/_artist.html.erb (327.6ms)
+  Rendered artists/_artist.html.erb (328.8ms)
+  Rendered artists/_artist.html.erb (330.1ms)
+  Rendered artists/_artist.html.erb (331.4ms)
+  Rendered artists/_artist.html.erb (332.7ms)
+  Rendered artists/_artist.html.erb (334.0ms)
+  Rendered artists/_artist.html.erb (335.3ms)
+  Rendered artists/_artist.html.erb (336.7ms)
+  Rendered artists/_artist.html.erb (338.2ms)
+  Rendered artists/_artist.html.erb (339.6ms)
+  Rendered artists/_artist.html.erb (340.7ms)
+  Rendered artists/_artist.html.erb (341.5ms)
+  Rendered artists/_artist.html.erb (342.2ms)
+  Rendered artists/_artist.html.erb (343.0ms)
+  Rendered artists/_artist.html.erb (343.8ms)
+  Rendered artists/_artist.html.erb (344.5ms)
+  Rendered artists/_artist.html.erb (345.4ms)
+  Rendered artists/_artist.html.erb (347.0ms)
+  Rendered artists/_artist.html.erb (348.0ms)
+  Rendered artists/_artist.html.erb (348.9ms)
+  Rendered artists/_artist.html.erb (349.7ms)
+  Rendered artists/_artist.html.erb (350.7ms)
+  Rendered artists/_artist.html.erb (351.7ms)
+  Rendered artists/_artist.html.erb (352.6ms)
+  Rendered artists/_artist.html.erb (353.5ms)
+  Rendered artists/_artist.html.erb (354.3ms)
+  Rendered artists/_artist.html.erb (355.1ms)
+  Rendered artists/_artist.html.erb (355.9ms)
+  Rendered artists/_artist.html.erb (356.8ms)
+  Rendered artists/_artist.html.erb (357.6ms)
+  Rendered artists/_artist.html.erb (358.7ms)
+  Rendered artists/_artist.html.erb (359.7ms)
+  Rendered artists/_artist.html.erb (360.5ms)
+  Rendered artists/_artist.html.erb (361.3ms)
+  Rendered artists/_artist.html.erb (362.1ms)
+  Rendered artists/_artist.html.erb (362.9ms)
+  Rendered artists/_artist.html.erb (363.7ms)
+  Rendered artists/_artist.html.erb (364.7ms)
+  Rendered artists/_artist.html.erb (365.7ms)
+  Rendered artists/_artist.html.erb (366.8ms)
+  Rendered artists/_artist.html.erb (367.6ms)
+  Rendered artists/_artist.html.erb (368.4ms)
+  Rendered artists/_artist.html.erb (369.3ms)
+  Rendered artists/_artist.html.erb (370.1ms)
+  Rendered artists/_artist.html.erb (371.0ms)
+  Rendered artists/_artist.html.erb (372.1ms)
+  Rendered artists/_artist.html.erb (373.1ms)
+  Rendered artists/_artist.html.erb (374.1ms)
+  Rendered artists/_artist.html.erb (375.2ms)
+  Rendered artists/_artist.html.erb (376.2ms)
+  Rendered artists/_artist.html.erb (377.3ms)
+  Rendered artists/_artist.html.erb (378.4ms)
+  Rendered artists/_artist.html.erb (379.3ms)
+  Rendered artists/_artist.html.erb (380.1ms)
+  Rendered artists/_artist.html.erb (380.9ms)
+  Rendered artists/_artist.html.erb (381.7ms)
+  Rendered artists/_artist.html.erb (382.5ms)
+  Rendered artists/_artist.html.erb (383.4ms)
+  Rendered artists/_artist.html.erb (384.3ms)
+  Rendered artists/_artist.html.erb (385.1ms)
+  Rendered artists/_artist.html.erb (385.9ms)
+  Rendered artists/_artist.html.erb (387.1ms)
+  Rendered artists/_artist.html.erb (388.0ms)
+  Rendered artists/_artist.html.erb (388.7ms)
+  Rendered artists/_artist.html.erb (389.6ms)
+  Rendered artists/_artist.html.erb (390.6ms)
+  Rendered artists/_artist.html.erb (391.3ms)
+  Rendered artists/_artist.html.erb (392.1ms)
+  Rendered artists/_artist.html.erb (393.1ms)
+  Rendered artists/_artist.html.erb (394.1ms)
+  Rendered artists/_artist.html.erb (395.0ms)
+  Rendered artists/_artist.html.erb (396.0ms)
+  Rendered artists/_artist.html.erb (397.0ms)
+  Rendered artists/_artist.html.erb (398.0ms)
+  Rendered artists/_artist.html.erb (398.9ms)
+  Rendered artists/_artist.html.erb (400.0ms)
+  Rendered artists/_artist.html.erb (401.1ms)
+  Rendered artists/_artist.html.erb (402.3ms)
+  Rendered artists/_artist.html.erb (403.5ms)
+  Rendered artists/_artist.html.erb (405.0ms)
+  Rendered artists/_artist.html.erb (406.4ms)
+  Rendered artists/_artist.html.erb (407.9ms)
+  Rendered artists/_artist.html.erb (409.0ms)
+  Rendered artists/_artist.html.erb (409.9ms)
+  Rendered artists/_artist.html.erb (410.7ms)
+  Rendered artists/_artist.html.erb (411.5ms)
+  Rendered artists/_artist.html.erb (412.3ms)
+  Rendered artists/_artist.html.erb (413.1ms)
+  Rendered artists/_artist.html.erb (414.0ms)
+  Rendered artists/_artist.html.erb (415.1ms)
+  Rendered artists/_artist.html.erb (416.1ms)
+  Rendered artists/_artist.html.erb (417.1ms)
+  Rendered artists/_artist.html.erb (418.1ms)
+  Rendered artists/_artist.html.erb (419.2ms)
+  Rendered artists/_artist.html.erb (420.3ms)
+  Rendered artists/_artist.html.erb (421.4ms)
+  Rendered artists/_artist.html.erb (422.3ms)
+  Rendered artists/_artist.html.erb (423.1ms)
+  Rendered artists/_artist.html.erb (424.1ms)
+  Rendered artists/_artist.html.erb (425.0ms)
+  Rendered artists/_artist.html.erb (426.0ms)
+  Rendered artists/_artist.html.erb (427.0ms)
+  Rendered artists/_artist.html.erb (427.9ms)
+  Rendered artists/_artist.html.erb (428.9ms)
+  Rendered artists/_artist.html.erb (430.0ms)
+  Rendered artists/_artist.html.erb (431.4ms)
+  Rendered artists/_artist.html.erb (432.6ms)
+  Rendered artists/_artist.html.erb (433.6ms)
+  Rendered artists/_artist.html.erb (434.4ms)
+  Rendered artists/_artist.html.erb (435.2ms)
+  Rendered artists/_artist.html.erb (436.0ms)
+  Rendered artists/_artist.html.erb (436.7ms)
+  Rendered artists/_artist.html.erb (437.5ms)
+  Rendered artists/_artist.html.erb (438.4ms)
+  Rendered artists/_artist.html.erb (439.6ms)
+  Rendered artists/_artist.html.erb (440.7ms)
+  Rendered artists/_artist.html.erb (441.7ms)
+  Rendered artists/_artist.html.erb (442.8ms)
+  Rendered artists/_artist.html.erb (443.8ms)
+  Rendered artists/_artist.html.erb (445.0ms)
+  Rendered artists/_artist.html.erb (445.8ms)
+  Rendered artists/_artist.html.erb (446.7ms)
+  Rendered artists/_artist.html.erb (447.5ms)
+  Rendered artists/_artist.html.erb (448.5ms)
+  Rendered artists/_artist.html.erb (449.5ms)
+  Rendered artists/_artist.html.erb (450.5ms)
+  Rendered artists/_artist.html.erb (452.0ms)
+  Rendered artists/_artist.html.erb (453.1ms)
+  Rendered artists/_artist.html.erb (454.3ms)
+  Rendered artists/_artist.html.erb (455.5ms)
+  Rendered artists/_artist.html.erb (456.8ms)
+  Rendered artists/_artist.html.erb (458.1ms)
+  Rendered artists/_artist.html.erb (459.4ms)
+  Rendered artists/_artist.html.erb (460.9ms)
+  Rendered artists/_artist.html.erb (462.4ms)
+  Rendered artists/_artist.html.erb (463.8ms)
+  Rendered artists/_artist.html.erb (464.6ms)
+  Rendered artists/_artist.html.erb (465.4ms)
+  Rendered artists/_artist.html.erb (466.2ms)
+  Rendered artists/_artist.html.erb (467.0ms)
+  Rendered artists/_artist.html.erb (467.8ms)
+  Rendered artists/_artist.html.erb (468.8ms)
+  Rendered artists/_artist.html.erb (469.8ms)
+  Rendered artists/_artist.html.erb (470.6ms)
+  Rendered artists/_artist.html.erb (471.4ms)
+  Rendered artists/_artist.html.erb (472.3ms)
+  Rendered artists/_artist.html.erb (473.2ms)
+  Rendered artists/_artist.html.erb (474.2ms)
+  Rendered artists/_artist.html.erb (489.6ms)
+  Rendered artists/_artist.html.erb (491.0ms)
+  Rendered artists/_artist.html.erb (491.8ms)
+  Rendered artists/_artist.html.erb (492.6ms)
+  Rendered artists/_artist.html.erb (493.4ms)
+  Rendered artists/_artist.html.erb (494.3ms)
+  Rendered artists/_artist.html.erb (495.2ms)
+  Rendered artists/_artist.html.erb (496.2ms)
+  Rendered artists/_artist.html.erb (497.4ms)
+  Rendered artists/_artist.html.erb (498.6ms)
+  Rendered artists/_artist.html.erb (499.4ms)
+  Rendered artists/_artist.html.erb (500.3ms)
+  Rendered artists/_artist.html.erb (501.2ms)
+  Rendered artists/_artist.html.erb (502.2ms)
+  Rendered artists/_artist.html.erb (503.0ms)
+  Rendered artists/_artist.html.erb (503.9ms)
+  Rendered artists/_artist.html.erb (504.9ms)
+  Rendered artists/_artist.html.erb (505.9ms)
+  Rendered artists/_artist.html.erb (506.8ms)
+  Rendered artists/_artist.html.erb (507.7ms)
+  Rendered artists/_artist.html.erb (508.7ms)
+  Rendered artists/_artist.html.erb (509.5ms)
+  Rendered artists/_artist.html.erb (510.5ms)
+  Rendered artists/_artist.html.erb (511.3ms)
+  Rendered artists/_artist.html.erb (512.2ms)
+  Rendered artists/_artist.html.erb (513.0ms)
+  Rendered artists/_artist.html.erb (513.9ms)
+  Rendered artists/_artist.html.erb (515.0ms)
+  Rendered artists/_artist.html.erb (515.9ms)
+  Rendered artists/_artist.html.erb (517.0ms)
+  Rendered artists/_artist.html.erb (517.9ms)
+  Rendered artists/_artist.html.erb (518.9ms)
+  Rendered artists/_artist.html.erb (520.0ms)
+  Rendered artists/_artist.html.erb (521.3ms)
+  Rendered artists/_artist.html.erb (522.6ms)
+  Rendered artists/_artist.html.erb (523.9ms)
+  Rendered artists/_artist.html.erb (525.4ms)
+  Rendered artists/_artist.html.erb (526.8ms)
+  Rendered artists/_artist.html.erb (527.6ms)
+  Rendered artists/_artist.html.erb (528.3ms)
+  Rendered artists/_artist.html.erb (529.1ms)
+  Rendered artists/_artist.html.erb (529.9ms)
+  Rendered artists/_artist.html.erb (530.7ms)
+  Rendered artists/_artist.html.erb (531.6ms)
+  Rendered artists/_artist.html.erb (533.0ms)
+  Rendered artists/_artist.html.erb (534.0ms)
+  Rendered artists/_artist.html.erb (535.0ms)
+  Rendered artists/_artist.html.erb (536.1ms)
+  Rendered artists/_artist.html.erb (537.2ms)
+  Rendered artists/_artist.html.erb (538.4ms)
+  Rendered artists/_artist.html.erb (539.9ms)
+  Rendered artists/_artist.html.erb (541.1ms)
+  Rendered artists/_artist.html.erb (542.2ms)
+  Rendered artists/_artist.html.erb (543.5ms)
+  Rendered artists/_artist.html.erb (545.2ms)
+  Rendered artists/_artist.html.erb (546.0ms)
+  Rendered artists/_artist.html.erb (546.7ms)
+  Rendered artists/_artist.html.erb (547.5ms)
+  Rendered artists/_artist.html.erb (548.3ms)
+  Rendered artists/_artist.html.erb (549.2ms)
+  Rendered artists/_artist.html.erb (550.0ms)
+  Rendered artists/_artist.html.erb (551.2ms)
+  Rendered artists/_artist.html.erb (553.0ms)
+  Rendered artists/_artist.html.erb (553.8ms)
+  Rendered artists/_artist.html.erb (554.7ms)
+  Rendered artists/_artist.html.erb (555.9ms)
+  Rendered artists/_artist.html.erb (556.9ms)
+  Rendered artists/_artist.html.erb (558.1ms)
+  Rendered artists/_artist.html.erb (559.4ms)
+  Rendered artists/_artist.html.erb (560.5ms)
+  Rendered artists/_artist.html.erb (561.7ms)
+  Rendered artists/_artist.html.erb (563.2ms)
+  Rendered artists/_artist.html.erb (564.2ms)
+  Rendered artists/_artist.html.erb (565.0ms)
+  Rendered artists/_artist.html.erb (565.9ms)
+  Rendered artists/_artist.html.erb (566.7ms)
+  Rendered artists/_artist.html.erb (567.5ms)
+  Rendered artists/_artist.html.erb (568.5ms)
+  Rendered artists/_artist.html.erb (569.4ms)
+  Rendered artists/_artist.html.erb (570.5ms)
+  Rendered artists/_artist.html.erb (571.4ms)
+  Rendered artists/_artist.html.erb (572.3ms)
+  Rendered artists/_artist.html.erb (573.4ms)
+  Rendered artists/_artist.html.erb (574.5ms)
+  Rendered artists/_artist.html.erb (575.6ms)
+  Rendered artists/_artist.html.erb (576.9ms)
+  Rendered artists/_artist.html.erb (577.9ms)
+  Rendered artists/_artist.html.erb (579.3ms)
+  Rendered artists/_artist.html.erb (580.7ms)
+  Rendered artists/_artist.html.erb (582.2ms)
+  Rendered artists/_artist.html.erb (583.1ms)
+  Rendered artists/_artist.html.erb (584.0ms)
+  Rendered artists/_artist.html.erb (584.8ms)
+  Rendered artists/_artist.html.erb (585.6ms)
+  Rendered artists/_artist.html.erb (586.4ms)
+  Rendered artists/_artist.html.erb (587.3ms)
+  Rendered artists/_artist.html.erb (588.3ms)
+  Rendered artists/_artist.html.erb (589.2ms)
+  Rendered artists/_artist.html.erb (590.2ms)
+  Rendered artists/_artist.html.erb (591.1ms)
+  Rendered artists/_artist.html.erb (592.1ms)
+  Rendered artists/_artist.html.erb (593.1ms)
+  Rendered artists/_artist.html.erb (594.2ms)
+  Rendered artists/_artist.html.erb (595.2ms)
+  Rendered artists/_artist.html.erb (596.0ms)
+  Rendered artists/_artist.html.erb (596.9ms)
+  Rendered artists/_artist.html.erb (597.7ms)
+  Rendered artists/_artist.html.erb (598.5ms)
+  Rendered artists/_artist.html.erb (599.3ms)
+  Rendered artists/_artist.html.erb (600.7ms)
+  Rendered artists/_artist.html.erb (601.6ms)
+  Rendered artists/_artist.html.erb (602.4ms)
+  Rendered artists/_artist.html.erb (603.2ms)
+  Rendered artists/_artist.html.erb (604.0ms)
+  Rendered artists/_artist.html.erb (604.8ms)
+  Rendered artists/_artist.html.erb (605.6ms)
+  Rendered artists/_artist.html.erb (606.5ms)
+  Rendered artists/_artist.html.erb (607.5ms)
+  Rendered artists/_artist.html.erb (608.3ms)
+  Rendered artists/_artist.html.erb (609.3ms)
+  Rendered artists/_artist.html.erb (610.6ms)
+  Rendered artists/new.html.erb within layouts/application (612.5ms)
+Completed 500 Internal Server Error in 624ms (ActiveRecord: 0.3ms)
+
+SystemStackError (stack level too deep):
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/_artist.html.erb:1:in `_app_views_artists__artist_html_erb___3198081791848888200_70100066250680'
+  app/views/artists/new.html.erb:3:in `_app_views_artists_new_html_erb___1865583436285941790_70100014502020'
+
+
+
+
+Started GET "/songs/new" for ::1 at 2016-08-29 21:58:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#new as HTML
+  Rendered songs/new.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    4:   <%= f.label :title %>
+    5:   <%= f.text_field :title %><br>
+    6:   <%= f.label :artist_name %>
+    7:   <%= f.text_field :artist_name %>
+    8:   <br />
+    9: 
+   10:   <%= f.submit %>
+  app/models/song.rb:5:in `artist_name'
+  app/views/songs/new.html.erb:7:in `block in _app_views_songs_new_html_erb___2967419346549120727_70148096116440'
+  app/views/songs/new.html.erb:3:in `_app_views_songs_new_html_erb___2967419346549120727_70148096116440'
+
+
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.0ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.9ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.5ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.7ms)
+
+
+Started GET "/songs/new" for ::1 at 2016-08-29 21:59:15 -0400
+Processing by SongsController#new as HTML
+  Rendered songs/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 203ms (Views: 197.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 21:59:16 -0400
+
+
+Started POST "/songs" for ::1 at 2016-08-29 21:59:19 -0400
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2KTc1wpqN/jMUfSb/bjZ/6NmDzycwZmBFVCrkoYEL2W3YlyrJztC/ln427B5+5A++wXWuoyVTgg06HJ3IX2Vww==", "song"=>{"title"=>"afasdf", "artist_name"=>"asdfas"}, "commit"=>"Create Song"}
+  [1m[35mArtist Load (0.6ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "asdfas"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "asdfas"], ["created_at", "2016-08-30 01:59:19.361904"], ["updated_at", "2016-08-30 01:59:19.361904"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "songs" ("title", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "afasdf"], ["artist_id", 3], ["created_at", "2016-08-30 01:59:19.364504"], ["updated_at", "2016-08-30 01:59:19.364504"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/songs/3
+Completed 302 Found in 19ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/songs/3" for ::1 at 2016-08-29 21:59:19 -0400
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs" for ::1 at 2016-08-29 21:59:21 -0400
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered songs/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-08-29 21:59:28 -0400
+Processing by ArtistsController#new as HTML
+  Rendered artists/_artist.html.erb (3.3ms)
+  Rendered artists/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/artists/" for ::1 at 2016-08-29 21:59:30 -0400
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template artists/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/aehmt/Development/code/rails/refactoring-views-with-helpers-lab-wdf-000/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/aehmt/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (46.9ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (35.0ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (78.0ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-08-29 21:59:42 -0400
+Processing by ArtistsController#new as HTML
+  Rendered artists/_artist.html.erb (1.8ms)
+  Rendered artists/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists" for ::1 at 2016-08-29 21:59:52 -0400
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1lL6+5fxSOfT7IOJ3NsVG3EyGQtFmS7cGWXTJ9weH3G5lHqHuqA94UZFrKJYmFzaKVHAjVXN+VU43QrCe2el1w==", "artist"=>{"name"=>"aadsfasdf"}, "commit"=>"Create Artist"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "aadsfasdf"], ["created_at", "2016-08-30 01:59:52.503253"], ["updated_at", "2016-08-30 01:59:52.503253"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/artists/4
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/artists/4" for ::1 at 2016-08-29 21:59:52 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendered artists/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1>Editing <%= @artist.name %></h1>
+    2: 
+    3: <%= render :partial => "artist", :locals => { :artist => @artist } %>
+  app/views/artists/show.html.erb:1:in `_app_views_artists_show_html_erb___1694535055810435189_70148170914480'
+
+
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.1ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (79.6ms)
+
+
+Started GET "/artists/4" for ::1 at 2016-08-29 22:00:29 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendered artists/show.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `artist_name' for nil:NilClass):
+    1: <h1>Editing <%= @artist.artist_name %></h1>
+    2: 
+    3: <%= render :partial => "artist", :locals => { :artist => @artist } %>
+  app/views/artists/show.html.erb:1:in `_app_views_artists_show_html_erb___1694535055810435189_70148171570880'
+
+
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.1ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (81.3ms)
+
+
+Started GET "/artists/4/edit" for ::1 at 2016-08-29 22:00:53 -0400
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered artists/_artist.html.erb (1.5ms)
+  Rendered artists/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/artists/4" for ::1 at 2016-08-29 22:00:59 -0400
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M/G3y0LUwMI2q9ZtoBNX32V6mX5O66N8PlGeHGjsKbBcNze3b4W1xKMC+UYkUB4ePRlA+F6/dPUf6Uf5z5WTFg==", "artist"=>{"name"=>"aaaaa"}, "commit"=>"Update Artist", "id"=>"4"}
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "artists" SET "name" = ?, "updated_at" = ? WHERE "artists"."id" = ?[0m  [["name", "aaaaa"], ["updated_at", "2016-08-30 02:00:59.559260"], ["id", 4]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/artists/4
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/artists/4" for ::1 at 2016-08-29 22:00:59 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendered artists/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `artist_name' for nil:NilClass):
+    1: <h1>Editing <%= @artist.artist_name %></h1>
+    2: 
+    3: <%= render :partial => "artist", :locals => { :artist => @artist } %>
+  app/views/artists/show.html.erb:1:in `_app_views_artists_show_html_erb___1694535055810435189_70148164257400'
+
+
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.5ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/aehmt/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (80.6ms)
+
+
+Started GET "/artists/4" for ::1 at 2016-08-29 22:02:38 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered artists/_artist.html.erb (1.8ms)
+  Rendered artists/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 17ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-29 22:02:38 -0400
+
+
+Started GET "/artists/new" for ::1 at 2016-08-29 22:02:50 -0400
+Processing by ArtistsController#new as HTML
+  Rendered artists/_artist.html.erb (1.4ms)
+  Rendered artists/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/artists" for ::1 at 2016-08-29 22:02:54 -0400
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nAet81ff0eUoZhRLI89yy1KaC0B1cz8tGuJImmIp1sXzwS2Peo6k473PO2CnjDsKCvnSxmUn6KQ7WpF/xVBsYw==", "artist"=>{"name"=>"3333"}, "commit"=>"Create Artist"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "3333"], ["created_at", "2016-08-30 02:02:54.736166"], ["updated_at", "2016-08-30 02:02:54.736166"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/artists/5
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/5" for ::1 at 2016-08-29 22:02:54 -0400
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered artists/_artist.html.erb (1.4ms)
+  Rendered artists/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.1ms)
